@@ -1,0 +1,130 @@
+.header {
+    height:  72px;
+    background: #2B2D31;
+    display: flex;
+    justify-content: space-between;
+    .left_wrapper {
+        display: flex;
+        align-items: center;
+        .burger_wrapper {
+            width: 72px;
+            height: 72px;
+            background: #35393F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .burger_wrapper_btn {
+                background: transparent;
+                border: none;
+                cursor: pointer;
+            }
+        }
+        .text_wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .title {
+                margin-left: 20px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 16px;
+                letter-spacing: 2px;
+                color: white;
+            }
+            span {
+                width: 1px;
+                height: 40px;
+                background: #5A6069;
+            }
+            .document_wrapper {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                img {
+                    width: 13px;
+                    height: 16px;
+                }
+                .input_wrapper {
+                    .document_name_title {
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 13px;
+                        line-height: 15px;
+                        color: #7C8187;
+                    }
+                    .document_name {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .button_wrapper {
+        padding: 20px;
+        display: flex;
+        gap: 24px;
+        align-items:center ;
+        .trash {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .save {
+            width: 152px;
+            height: 40px;
+            background: #E46643;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+    
+    }
+    
+}
+.inputText {
+    width: 140px;
+}
+
+@media (max-width:630px) {
+    .header {
+        .left_wrapper {
+            .text_wrapper {
+                .title {
+                    display: none;
+                }
+                span {
+                    display: none;
+                }
+                .document_wrapper {
+                    img {
+                        display: none;
+                    }
+                    .input_wrapper {
+                        .document_name_title {
+                            display: none;
+                        }
+                        .document_name {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .button_wrapper {
+            padding: 5px;
+            gap: 10px;
+        }
+    }
+    .inputText {
+        margin-left: 2px;
+    }
+    
+}

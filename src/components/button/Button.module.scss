@@ -1,0 +1,40 @@
+.button {
+    width:  fit-content;
+    padding: 20px;
+    height: 40px;
+    background: #E46643;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px ;
+    transition: 0.2s;
+    &:hover {
+        transition: 0.2s;
+        background: #F39765;
+    }
+}
+
+
+.save_text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+.text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+@media (max-width:630px) {
+    .save_text {
+        display: none;
+    }
+}

@@ -1,0 +1,61 @@
+.markdown_wrapper {
+    width: 50vw;
+    height: 100vh;
+    border-right: 2px solid #E4E4E4;
+}
+.markdown_wrapper_100 {
+    display: none;
+   
+}
+.markdown_header {
+    height: 42px;
+    background: #F5F5F5;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  
+    .title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 2px;
+        color: #7C8187;
+    }
+    .markdown_btn {
+        display: none;
+    }
+}
+.textarea {
+    overflow: hidden;
+    font-family: 'Roboto Mono', monospace;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #35393F;
+    
+    &:focus {
+        outline: none;
+    }
+}
+@media(max-width:630px) {
+     .markdown_wrapper {
+         width: 100vw;
+     }
+     .markdown_header {
+        .markdown_btn {
+            display: block;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    
+}
