@@ -126,6 +126,19 @@
                             margin-left: 5px;
                         }
                     }
+                    .editBtn {
+                        display: block;
+                        margin-top: 0px;
+                        img {
+                            display: block;
+                            width: 15px;
+                            height: 15px;
+                        }
+                        cursor: pointer;
+                    }
+                    .doneBtn {
+                        @extend .editBtn;
+                    }
                 }
                 
             }
@@ -137,6 +150,7 @@
     }
     .inputText {
         margin-left: 2px;
+        width: 110px;
     }
     
 }
