@@ -9,7 +9,8 @@ import { IDocument } from '../../models/Document';
 import { observer } from 'mobx-react-lite';
 import store from '../../store/store';
 import { motion } from 'framer-motion';
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Sidebar = observer(() => {
     const [docs,setDocs] =useState<IDocument[]>([])
@@ -24,6 +25,16 @@ const Sidebar = observer(() => {
             name: `New Doc ID${id.substring(0,1)}` ,
             content:''
         });
+        toast.success('Created', {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     }
 
     useEffect(() => {
@@ -33,6 +44,8 @@ const Sidebar = observer(() => {
                 const data = snapshot.val()
                 if (data !== null) {
                     setDocs(Object.values(data))
+                    //@ts-ignore
+                   
                 }
             });
 
@@ -54,7 +67,10 @@ const Sidebar = observer(() => {
         )
     },[])
     
+
+   
   return (
+    <>
     <motion.div className={styles.wrapper} onClick={(e)=>e.stopPropagation()}
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}>
@@ -75,6 +91,8 @@ const Sidebar = observer(() => {
 
         
      </motion.div>  
+      <ToastContainer />
+    </>
   )
 })
 
